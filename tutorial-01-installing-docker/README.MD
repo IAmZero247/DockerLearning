@@ -1,12 +1,42 @@
-# Docker Tutorial 01
+# Docker Tutorial 01 - Installing Docker + Docker Terminologies
 
-In this tutorial we'll look at the basics of creating containers
 
+
+
+
+### Installing Docket in AWS 
+*	Create Ubuntu Machine on AWS
+           { All Traffic – anywhere }
+* 	Connect using git bash and go to Root Account
+            `$ sudo  su –`
+*	Download and run shell script
+            https://get.docker.com/
+		   
+            ```
+			curl -fsSL https://get.docker.com -o get-docker.sh`
+            sh get-docker.sh
+            ```
+			
+*	Verify Docker Installation 
+          `docker --version`
+		  
+		  
+### Docker Terminologies 
+    * Docker Images   
+		Combinations of binaries / libraries which are necessary for one software application.
+    * Docker Containers  
+		When image is installed and in comes into running condition, it is called container.
+	* Docker Host
+		Machine on which docker is installed, is called as Docker host.
+	* Docker Client
+		Terminal used to run docker run commands ( Git bash )
+		
 ### Verify the docker install with
 
-`docker run hello-world`
+`docker run hello-world`		
 
-### Running an ubuntu container in foreground mode
+
+### Running an ubuntu container in foreground mode (interactive shell mode)
 
 `docker run -it ubuntu bash`
 
@@ -15,7 +45,7 @@ In this tutorial we'll look at the basics of creating containers
 -i              : Keep STDIN open even if not attached
 ```
 
-### Running an nginx container in background mode and mapping a port
+### Running an nginx container in background mode (detach mode) and mapping a port
 
 `docker run -d -p 8080:80 nginx`
 

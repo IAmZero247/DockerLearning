@@ -1,47 +1,62 @@
-# Docker Tutorial 01 - Installing Docker + Docker Terminologies 
+# Docker Tutorial 02  
 
 
 
 
 
-### Installing Docket in AWS 
-1.	Create Ubuntu Machine on AWS
-	  * { All Traffic – anywhere }
-		   
-2. 	Connect using git bash and go to Root Account
+### Image Commands 
 
-      * $ sudo  su –
-			
-3.	Download and run shell script
+	  
+1.	To download a docker image 
 
-      * https://get.docker.com/
-		   
-            ```
-			curl -fsSL https://get.docker.com -o get-docker.sh`
-            sh get-docker.sh
-            ```
-			
-4.	Verify Docker Installation 
+        `docker pull image_name`
+		
+        ```
+		docker pull tomee
+        docker pull ubuntu
+        docker pull jenkins/jenkins
+		```
+		
+2.	To see the list of docker images 
 
-      * docker --version
+		```
+		docker image ls 
+		(or) 
+		docker images
+        ```		
+		
+3.	To delete a docker image from docker host 
+
+        `docker rmi image_name/image_id` 
+		
+4.	To upload a docker image into docker hub 
+
+      `docker push image_name` 
+	  
+5.	To tag an image 
+
+	  `docker tag   image_name   ipaddress_of_local_registry:5000/image_name` 
+	  
+6.	To build an image from a customised container 
+
+      `docker   commit  container_name/container_id     new_image_name` 
+	  
+7.	To create an image from docker file 
+
+      `docker build -t    new_image_name` 
+	  
+8.	To search for a docker image 
+
+      `docker search image_name` 
+	  
+9.	To delete all images that are not attached to containers 
+
+      `docker system prune -a` 
+	  
+	  
 		  
 		  
-### Docker Terminologies 
-    1. Docker Images   
-	
-		Combinations of binaries / libraries which are necessary for one software application.
-		
-    2. Docker Containers  
-	
-		When image is installed and in comes into running condition, it is called container.
-		
-	3. Docker Host
-	
-		Machine on which docker is installed, is called as Docker host.
-		
-	4. Docker Client
-	
-		Terminal used to run docker run commands ( Git bash )
+
 		
 ### Verify the docker install with
 
@@ -79,16 +94,3 @@
                (use 'docker port' to see the actual mapping)
 ```
 
-### Show the running containers
-
-`docker ps`
-
-### Stopping a running container
-
-`docker stop CONTAINER_ID`
-
-### Resources
-
-* [Docker Reference - run](https://docs.docker.com/engine/reference/run/)
-* [Docker Reference - ps](https://docs.docker.com/engine/reference/commandline/ps/)
-* [Docker Reference - stop](https://docs.docker.com/engine/reference/commandline/stop/)

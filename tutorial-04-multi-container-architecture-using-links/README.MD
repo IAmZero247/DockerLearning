@@ -123,9 +123,20 @@
             ]
       ```	
 
-6.  To start php as container (link with mydb && )
+6.  To start php as container (link with mydb & myapache )
 
       `docker  run --name myphp  -d --link myapache:myapache-myphp-link1  --link mydb:mydb-myphp-link1    php`
+
+7.  To check if php is linked with mysql and tomcat
+	   
+	  ```
+	   docker inspect -f "{{ .HostConfig.Links }}" myapache
+	   
+	    "Links": [
+                "/mydb:/myphp/mydb-myphp-link1",
+				"/myapache:/myphp/myapache-myphp-link1",
+            ]
+      ```	
 
 #### Use case : Create CI-CD environment, where jenkins container is linked with two Tomcat containers.
 

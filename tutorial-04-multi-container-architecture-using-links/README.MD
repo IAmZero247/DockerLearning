@@ -1,6 +1,6 @@
-# Docker Tutorial 04 - Multi container architecture using docker   
+# Docker Tutorial 04 - Multi Container Architecture Using Docker   
 
-1. --link
+1. link (adhoc way)
 2. docker-compose
 
 ## Link
@@ -123,7 +123,77 @@
             ]
       ```	
 
-6.  To start php as container
+6.  To start php as container (link with mydb && )
 
-      `docker  run --name myphp  -d --link myapache:tomcat  --link mydb:myapache-myphp-link1    php`
+      `docker  run --name myphp  -d --link myapache:myapache-myphp-link1  --link mydb:mydb-myphp-link1    php`
+
+#### Use case : Create CI-CD environment, where jenkins container is linked with two Tomcat containers.
+
+1.  Remove all containers
+
+      ```
+	  docker rm  -f  $(docker ps -aq)
+	  
+	  docker ps 
+	  ```
+	  
+2.  Jenkin Server 
+
+      `docker run  --name  jenkin1  -d -p 7070:8080 jenkins/jenkins`	
+	
+	  ```
+	  To check jenkins is running or not?
+	
+	  Open browser
+	
+	  public_ip:7070
+      Eg: http://18.138.58.3:7070
+	  ```
+
+3.  Dev Server 
+
+      `docker run --name  devserver  -d  -p 8080:8080 --link jenkin1:j-dev1 tomee`	
+	
+	  ```
+	  To check the Tomcat use public_ip but port number will be 8080
+	  
+      http://18.138.58.3:8080
+	  ```
+4.  Prod Server	  
+
+      `docker run --name  prodserver  -d  -p 9090:8080 --link jenkin1:j-prod1 tomee`
+	  
+	  ```
+	  To check the Tomcat use public_ip but port number will be 8080
+	  
+      http://18.138.58.3:9090
+	  ```
+#### Use case : Create Selenium Hub container, and link it with two node containers. One node with firefox installed, another node with chrome installed.
+
+      * Tester should be able to run selenuim automation programs for testing the application on multiple browsers.
+
+1.  Selenium Hub
+    
+      `docker run --name  hub  -d -p 4444:4444   selenium/hub`
+
+2.  Selenium Node Chrome
+
+      `docker run --name chrome  -d -p 5901:5900  --link hub:selenium   selenium/node-chrome-debug`
+	  
+3.  Selenium Node Firefox
+	
+      `docker run --name chrome  -d -p 5902:5900  --link hub:selenium   selenium/node-firefox-debug`	
+	
+	
+4.  Note: firefox and chrome containers are GUI containers.
+
+      * To see the GUI interface to chrome / firefox container
+        ------------------------------------------------------
+        Download and install vnc viewer
+        
+		In VNC viewer search bar
+        public_ip_dockerhost:5901
+		
+		18.136.211.65:5901
+        Password - secret
 	  

@@ -164,7 +164,7 @@
       `docker run --name  prodserver  -d  -p 9090:8080 --link jenkin1:j-prod1 tomee`
 	  
 	  ```
-	  To check the Tomcat use public_ip but port number will be 8080
+	  To check the Tomcat use public_ip but port number will be 9090
 	  
       http://18.138.58.3:9090
 	  ```
@@ -187,13 +187,15 @@
 	
 4.  Note: firefox and chrome containers are GUI containers.
 
-      * To see the GUI interface to chrome / firefox container
-        ------------------------------------------------------
+      * ###### To see the GUI interface to chrome / firefox container
+        -------------------------------------------------------------
         Download and install vnc viewer
         
-		In VNC viewer search bar
-        public_ip_dockerhost:5901
+		  - In VNC viewer search bar
 		
-		18.136.211.65:5901
-        Password - secret
+            public_ip_dockerhost:5901
+		
+		  - 18.136.211.65:5901
+		
+            Password - secret
 	  

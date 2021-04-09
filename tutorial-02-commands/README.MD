@@ -12,6 +12,7 @@
       `docker pull image_name`
 		
       ```
+	  Eg: 
 	  docker pull tomee
       docker pull ubuntu
       docker pull jenkins/jenkins
@@ -137,9 +138,10 @@
       
 18.	To create a container from a docker image  ( imp )
 
-      `docker run image_name`   
-    
-	Run command options 
+      `docker run image_name`
+	  
+      ```   
+	  Run command options 
 	  *	-it  -> For opening an interactive terminal in a container 
 	  *	--name -> Used for giving a name to a container 
 	  *	-d -> Used for running the container in detached mode as a background process 
@@ -152,4 +154,5 @@
 	  *	--network -> Used to run the contianer on a specific network 
 	  *	--link -> Used for linking the container for creating a multi container architecture 
 	  *	--memory  -> Used to specify the maximum amount of ram that the container can use
+	  ```
 

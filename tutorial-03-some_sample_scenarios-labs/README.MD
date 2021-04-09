@@ -109,7 +109,7 @@
 	  
   To know the port that is reserved for nginx 
 	  
-	  # docker port  appserver
+	  1. docker port  appserver
         80/tcp -> 0.0.0.0:32768
 		
 		80  is nginx port
@@ -117,7 +117,7 @@
 		
 		or
 		
-	 #  docker container ls    ( to see the port of nginz and docker host )
+	  2. docker container ls    ( to see the port of nginz and docker host )
   ```
 	  
   ```
@@ -140,9 +140,9 @@
   ```
   1. To connect to mysql database
 		
-	     mysql  -u  root  -p 
+	    mysql  -u  root  -p 
 		 
-  2. enter the password, we get mysql  prompt
+  2. Enter the password, we get mysql  prompt
 	  
   3. To see list of databases
 		
@@ -160,13 +160,13 @@
 		https://justinsomnia.org/2009/04/the-emp-and-dept-tables-for-mysql/
 		
   6. Verify 
-       > show tables; 
+        > show tables; 
 	   
   7. Exit 	   
 	   
-	   > exit
-	   # exit
-	   # exit
+	    > exit
+	    # exit
+	    # exit
 			
   ```		
 

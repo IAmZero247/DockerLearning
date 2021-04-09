@@ -112,8 +112,8 @@
 	  1. docker port  appserver
         80/tcp -> 0.0.0.0:32768
 		
-	80  is nginx port
-        32768  is  dockerhost port
+		80  is nginx port
+		32768  is  dockerhost port
 		
 		or
 		
@@ -145,14 +145,15 @@
   2. Enter the password, we get mysql  prompt
 	  
   3. To see list of databases
-		
+
 	> show databases;
 		
   4. To switch to a databse
 		
-        > use db_name
+	> use db_name
         
 	Eg:
+	
 	> use mysql;
 
   5. To create emp tables and dept tables use below def 

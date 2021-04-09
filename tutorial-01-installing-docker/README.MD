@@ -1,4 +1,4 @@
-# Docker Tutorial 01 - Installing Docker + Docker Terminologies
+# Docker Tutorial 01 - Installing Docker + Docker Terminologies 
 
 
 
@@ -6,10 +6,14 @@
 
 ### Installing Docket in AWS 
 *	Create Ubuntu Machine on AWS
+
            { All Traffic – anywhere }
 * 	Connect using git bash and go to Root Account
+
             `$ sudo  su –`
+			
 *	Download and run shell script
+
             https://get.docker.com/
 		   
             ```
@@ -18,17 +22,25 @@
             ```
 			
 *	Verify Docker Installation 
+
           `docker --version`
 		  
 		  
 ### Docker Terminologies 
     * Docker Images   
+	
 		Combinations of binaries / libraries which are necessary for one software application.
+		
     * Docker Containers  
+	
 		When image is installed and in comes into running condition, it is called container.
+		
 	* Docker Host
+	
 		Machine on which docker is installed, is called as Docker host.
+		
 	* Docker Client
+	
 		Terminal used to run docker run commands ( Git bash )
 		
 ### Verify the docker install with

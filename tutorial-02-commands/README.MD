@@ -148,7 +148,7 @@
 	  *	-e -> Used for passing environment variables to the container 
 	  *	-p -> Used for port mapping between port of container with the docker host port.
 	  *	-P -> Used for automatic port mapping ie, it will map the internal port of the container with some port on host machine. 
-		  - This host port will be some number greater than 30000 
+				( This host port will be some number greater than 30000 )
 	  *	-v -> Used for attaching a volume to the container 
 	  *	--volume-from 	-> Used for sharing volume between containers 
 	  *	--network -> Used to run the contianer on a specific network 

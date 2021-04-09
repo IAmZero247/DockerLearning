@@ -5,41 +5,41 @@
 
 
 ### Installing Docket in AWS 
-*	Create Ubuntu Machine on AWS
+1.	Create Ubuntu Machine on AWS
+	  * { All Traffic – anywhere }
+		   
+2. 	Connect using git bash and go to Root Account
 
-           { All Traffic – anywhere }
-* 	Connect using git bash and go to Root Account
-
-            `$ sudo  su –`
+      * $ sudo  su –
 			
-*	Download and run shell script
+3.	Download and run shell script
 
-            https://get.docker.com/
+      * https://get.docker.com/
 		   
             ```
 			curl -fsSL https://get.docker.com -o get-docker.sh`
             sh get-docker.sh
             ```
 			
-*	Verify Docker Installation 
+4.	Verify Docker Installation 
 
-          `docker --version`
+      * docker --version
 		  
 		  
 ### Docker Terminologies 
-    * Docker Images   
+    1. Docker Images   
 	
 		Combinations of binaries / libraries which are necessary for one software application.
 		
-    * Docker Containers  
+    2. Docker Containers  
 	
 		When image is installed and in comes into running condition, it is called container.
 		
-	* Docker Host
+	3. Docker Host
 	
 		Machine on which docker is installed, is called as Docker host.
 		
-	* Docker Client
+	4. Docker Client
 	
 		Terminal used to run docker run commands ( Git bash )
 		

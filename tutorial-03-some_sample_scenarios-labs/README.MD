@@ -162,7 +162,7 @@
 		
   6. Verify 
   
-        > show tables; 
+       > show tables; 
 	   
   7. Exit 	   
 	   

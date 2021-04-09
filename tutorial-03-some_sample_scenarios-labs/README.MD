@@ -48,6 +48,7 @@
 8.	Run jenkins container and verify  
 
       `docker run --name myjenkins  -p 9090:8080    -d   jenkins/jenkins`
+	  
       ```
 	  verification:
 	  
@@ -56,7 +57,7 @@
 	  
 9.	Run ubuntu container in IT  
 
-      `docker run   --name myubuntu   -it   ubuntu` 
+      `docker run   --name myubuntu   -it   ubuntu`
 	  
 	  ```
 	  Observation:  You have automatically entered into ubuntu
@@ -71,42 +72,42 @@
 	  
 		  
 		  
-### Scenario 1: To start centos as container 
+### Scenario 1: Start centos as container 
 
-      `docker run --name mycentos  -it  centos`
+  `docker run --name mycentos  -it  centos`
 	  
-	  `exit  ( To come back to dockerhost )`
+  `exit  ( To come back to dockerhost )`
 		
 ### Scenario 2: Start tomcat as a container and name it as "webserver". Perform port mapping and run this container in detached mode
 
-      `docker run --name webserver -p 7070:8080  -d tomee`
+  `docker run --name webserver -p 7070:8080  -d tomee`
 	  
-	  ```
-	  To access homepage of the tomcat container
-      Launch any browser
-      <public_ip_of_dockerhost>:7070
-      ```
+  ```
+  To access homepage of the tomcat container
+  Launch any browser
+  <public_ip_of_dockerhost>:7070
+  ```
 
 ### Scenario 3: Start jenkins as a container in detached mode , name is as "devserver", perform port mapping
 
-      `docker run -d  --name  devserver  -p 9090:8080 jenkins/jenkins`
+  `docker run -d  --name  devserver  -p 9090:8080 jenkins/jenkins`
       
-	  ```
-	  To access home page of jenkins ( In browser)
-	  <public_ip_of_dockerhost>:9090
-	  ```
+  ```
+  To access home page of jenkins ( In browser)
+  <public_ip_of_dockerhost>:9090
+  ```
 
 ### Scenario 4: Start nginx as a container and name as "appserver", run this in detached mode ,   perform automatic port mapping 
 
-      `docker run --name  appserver  -P  -d  nginx`
+  `docker run --name  appserver  -P  -d  nginx`
 	  
 				( if image is not available, it perform pull operation automatically )
 				( Capital P  , will perform automatic port mapping )
 	  
-	  ```
-	  How to check nginx is running or not?
+  ```
+  How to check nginx is running or not?
 	  
-	  To know the port that is reserved for nginx 
+  To know the port that is reserved for nginx 
 	  
 	  # docker port  appserver
         80/tcp -> 0.0.0.0:32768
@@ -116,51 +117,57 @@
 		
 		or
 		
-		docker container ls    ( to see the port of nginz and docker host )
-	  ```
+	 #  docker container ls    ( to see the port of nginz and docker host )
+  ```
 	  
-	  ```
-	  verification:  check nginx on browser
-      52.221.192.237:32768
-	  ```
+  ```
+  verification:  check nginx on browser
+  52.221.192.237:32768
+  ```
 
 ### Scenario 5: To start mysql  as container, open interactive terminal in it, create a sample table.
 
-      `docker run  --name  mydb  -d  -e MYSQL_ROOT_PASSWORD=mypassword  mysql:5`
+  `docker run  --name  mydb  -d  -e MYSQL_ROOT_PASSWORD=mypassword  mysql:5`
 	  
-	  ```
-	    * docker container ls
+  ```
+  1. docker container ls
 	  
-	  open container in Interactive Shell:
+  2. open container in Interactive Shell:
 	  
-	    * docker  exec   -it  mydb  bash
-	  ```
+    docker  exec   -it  mydb  bash
+  ```
 	  
-	  ```
-	    * To connect to mysql database
+  ```
+  1. To connect to mysql database
 		
 	     mysql  -u  root  -p 
 		 
-	    * enter the password, we get mysql  prompt
+  2. enter the password, we get mysql  prompt
 	  
-	    * To see list of databases
+  3. To see list of databases
 		
 		> show databases;
 		
-        * To switch to a databse
+  4. To switch to a databse
 		
         > use db_name
         
 		Eg:
-		> use mysql
+		> use mysql;
 
-		* To create emp tables and dept tables use below def 
+  5. To create emp tables and dept tables use below def 
 		
-			https://justinsomnia.org/2009/04/the-emp-and-dept-tables-for-mysql/
-			> exit
-			# exit
-			# exit
+		https://justinsomnia.org/2009/04/the-emp-and-dept-tables-for-mysql/
+		
+  6. Verify 
+       > show tables; 
+	   
+  7. Exit 	   
+	   
+	   > exit
+	   # exit
+	   # exit
 			
-	  ```		
+  ```		
 
 	  

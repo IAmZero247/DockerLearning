@@ -161,7 +161,8 @@
 		https://justinsomnia.org/2009/04/the-emp-and-dept-tables-for-mysql/
 		
   6. Verify 
-        > show tables; 
+  
+  	> show tables; 
 	   
   7. Exit 	   
 	   

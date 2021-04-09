@@ -15,7 +15,7 @@
 		
 2.	To download ubuntu
 
-	  `docker pull ubuntu`		
+      `docker pull ubuntu`		
 		
 3.	To download jenkins 
 
@@ -33,7 +33,7 @@
 	  
 5.	Stop the container 
 
-	  `docker stop  mytomcat` 
+      `docker stop  mytomcat` 
 	  
 6.	Remove the container 
 
@@ -113,7 +113,7 @@
         80/tcp -> 0.0.0.0:32768
 		
 		80  is nginx port
-        32768  is  dockerhost port
+		32768  is  dockerhost port
 		
 		or
 		
@@ -140,33 +140,35 @@
   ```
   1. To connect to mysql database
 		
-	    mysql  -u  root  -p 
+	mysql  -u  root  -p 
 		 
   2. Enter the password, we get mysql  prompt
 	  
   3. To see list of databases
-		
-		> show databases;
+
+	> show databases;
 		
   4. To switch to a databse
 		
-        > use db_name
+	> use db_name
         
-		Eg:
-		> use mysql;
+	Eg:
+	
+	> use mysql;
 
   5. To create emp tables and dept tables use below def 
 		
-		https://justinsomnia.org/2009/04/the-emp-and-dept-tables-for-mysql/
+	https://justinsomnia.org/2009/04/the-emp-and-dept-tables-for-mysql/
 		
   6. Verify 
-        > show tables; 
+  
+    > show tables; 
 	   
   7. Exit 	   
 	   
-	    > exit
-	    # exit
-	    # exit
+ 	> exit
+	# exit
+	# exit
 			
   ```		
 

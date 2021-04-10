@@ -1,4 +1,4 @@
-# Docker Tutorial 04 - Multi Container Architecture Using Docker   
+# Docker Tutorial 04 - Multi Container Architecture Using Docker Compose  
 
 1. link (adhoc way)
 2. docker-compose
@@ -47,7 +47,7 @@
 2. Docker Compose 
 
       ```
-	  
+	    1.Create docker file
 	    ---
 		version: '3'
 
@@ -67,6 +67,7 @@
 
 		:wq
 		
+		2.Start above services from docker compose file
 		
 		
 		docker-compose up

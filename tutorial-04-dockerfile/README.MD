@@ -29,9 +29,9 @@
     ```	
 
 ####  FROM
-1.  FROM keyword is used represent base image to create our our image
+1.   FROM keyword is used represent base image to create our our image
 
-2.  On Top of base image our image will be created
+2.   On Top of base image our image will be created
 
 ```
 	Syntax: 
@@ -45,7 +45,7 @@
 
 ####  MAINTAINER
 
-    MAINTAINER keyword is used to specify Dockerfile author information
+1.  MAINTAINER keyword is used to specify Dockerfile author information
 ```
 	Syntax:
 
@@ -57,7 +57,7 @@
 ####  COPY
 
 
-    COPY command is used to copy the files from source to destination while creating docker image
+2.  COPY command is used to copy the files from source to destination while creating docker image
 
 ```
 	Syntax:

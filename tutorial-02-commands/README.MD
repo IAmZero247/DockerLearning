@@ -8,7 +8,8 @@
 
 	  
 1.	To download a docker image 
-        ===========================
+        
+	===========================
 
       `docker pull image_name`
 		

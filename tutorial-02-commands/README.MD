@@ -12,13 +12,13 @@
 
 
 
-      `docker pull image_name`
+      `docker pull <image_name>`
 		
-      ```
+      	  ```
 	  Eg: 
 	  docker pull tomee
-      docker pull ubuntu
-      docker pull jenkins/jenkins
+          docker pull ubuntu
+          docker pull jenkins/jenkins
 	  ```
 		
 2.	<ins>To see the list of docker images </ins>

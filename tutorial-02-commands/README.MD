@@ -74,7 +74,7 @@
 	  
 2.	<ins>To see the list of running and stopped containers</ins>
  
-        `docker   ps -a` 
+  `docker   ps -a` 
       
      
 	  

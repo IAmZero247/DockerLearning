@@ -54,6 +54,8 @@
 	  
 9.	<ins>To delete all images that are not attached to containers </ins>
 
+        [Delete all stopped containers and un-used images and un-used networks]
+
       `docker system prune -a` 
 	  
 	  

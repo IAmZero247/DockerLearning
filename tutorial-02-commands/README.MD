@@ -8,6 +8,7 @@
 
 	  
 1.	To download a docker image 
+        ===========================
 
       `docker pull image_name`
 		
@@ -28,7 +29,7 @@
 		
 3.	To delete a docker image from docker host 
 
-      `docker rmi image_name/image_id` 
+      `docker rmi <image_name/image_id`> 
 		
 4.	To upload a docker image into docker hub 
 

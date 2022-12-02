@@ -55,7 +55,7 @@
 Then press 'R' to restart the session (This is in MobaXterm)
 
 6. execution below command to see docker status
-```
+
 ```
 	$ docker info
 ```      

@@ -139,7 +139,7 @@ Then press 'R' to restart the session (This is in MobaXterm)
 
 ### Stopping a running container
 
-`docker stop CONTAINER_ID`
+`docker stop <CONTAINER_ID>`
 
 ### Resources
 

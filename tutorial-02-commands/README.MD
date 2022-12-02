@@ -30,7 +30,7 @@
 		
 3.	<ins>To delete a docker image from docker host </ins>
 
-      `docker rmi <image_name/image_id`> 
+      `docker rmi <image_name/image_id>`
 		
 4.	<ins>To upload a docker image into docker hub </ins>
 

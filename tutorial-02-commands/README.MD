@@ -75,6 +75,10 @@
 2.	<ins>To see the list of running and stopped containers</ins>
  
   `docker   ps -a` 
+  
+3.      <ins>Run docker image </ins>
+
+        `docker run <image-name/image-id>`
       
      
 	  

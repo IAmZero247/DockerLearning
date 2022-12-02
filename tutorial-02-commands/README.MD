@@ -76,9 +76,7 @@
  
           `docker   ps -a` 
       
-3.      <ins>Run docker image</ins>
-
-        `docker run <image-name/image-id>`     
+     
 	  
 4.	To start a container
  

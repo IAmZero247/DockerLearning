@@ -6,11 +6,9 @@
 
 ### Image Commands 
 
-1. <u>………. </u> tags.
-<ins>……… </ins> tags
 
 	  
-1.	<U> To download a docker image </U>
+1.	<ins> To download a docker image </ins>
 
 
 

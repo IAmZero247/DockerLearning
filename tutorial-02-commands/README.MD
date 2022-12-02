@@ -80,11 +80,11 @@
 
         `docker run <image-name/image-id>`      
 	  
-3.	To start a container
+4.	To start a container
  
       `docker  start  container_name/container_id`
 	  
-4.	To stop a running container 
+5.	To stop a running container 
 
       `docker stop   container_name/container_id`
 	  

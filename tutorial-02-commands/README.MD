@@ -7,9 +7,9 @@
 ### Image Commands 
 
 	  
-1.	To download a docker image 
+1.	<u>To download a docker image</u>
 
-==================================
+
 
       `docker pull image_name`
 		

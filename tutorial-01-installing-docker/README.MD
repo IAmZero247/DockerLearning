@@ -37,7 +37,9 @@
 		
     3. Docker Containers  
 	
-		When image is installed and in comes into running condition, it is called container.
+		When image is installed and in comes into running condition, it is called container. 
+		
+		Docker container is runtime instance of our application. When we run Docker Image it will create Docker Container. Inside Container our application and application dependencies will be available.
 		
     4. Docker Host
 	

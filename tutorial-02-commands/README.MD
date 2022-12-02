@@ -8,7 +8,7 @@
 
 
 	  
-1.	<ins> To download a docker image </ins>
+1.	<ins>To download a docker image </ins>
 
 
 
@@ -21,7 +21,7 @@
       docker pull jenkins/jenkins
 	  ```
 		
-2.	To see the list of docker images 
+2.	<ins>To see the list of docker images </ins>
 
 	  ```
 	  docker image ls 
@@ -29,31 +29,31 @@
 	  docker images
       ```		
 		
-3.	To delete a docker image from docker host 
+3.	<ins>To delete a docker image from docker host </ins>
 
       `docker rmi <image_name/image_id`> 
 		
-4.	To upload a docker image into docker hub 
+4.	<ins>To upload a docker image into docker hub </ins>
 
       `docker push image_name` 
 	  
-5.	To tag an image 
+5.	<ins>To tag an image </ins>
 
 	  `docker tag   image_name   ipaddress_of_local_registry:5000/image_name` 
 	  
-6.	To build an image from a customised container 
+6.	<ins>To build an image from a customised container</ins> 
 
       `docker   commit  container_name/container_id     new_image_name` 
 	  
-7.	To create an image from docker file 
+7.	<ins>To create an image from docker file</ins> 
 
       `docker build -t    new_image_name` 
 	  
-8.	To search for a docker image 
+8.	<ins>To search for a docker image </ins>
 
       `docker search image_name` 
 	  
-9.	To delete all images that are not attached to containers 
+9.	<ins>To delete all images that are not attached to containers </ins>
 
       `docker system prune -a` 
 	  

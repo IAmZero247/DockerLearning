@@ -57,7 +57,7 @@
 ####  COPY
 
 
-2.  COPY command is used to copy the files from source to destination while creating docker image
+1.  COPY command is used to copy the files from source to destination while creating docker image
 
 ```
 	Syntax:
@@ -90,9 +90,9 @@
 
 2.  What is the difference between COPY and ADD commands ?
 
-a. Using COPY command we can just copy the files from one path to another path with in the machine
+	a. Using COPY command we can just copy the files from one path to another path with in the machine
 
-b. Using ADD command we can copy files from one path to another path and it supports source location as URL also.
+	b. Using ADD command we can copy files from one path to another path and it supports source location as URL also.
 
 
 

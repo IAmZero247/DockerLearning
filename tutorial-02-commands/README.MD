@@ -50,7 +50,7 @@
 	  
 8.	<ins>To search for a docker image </ins>
 
-      `docker search image_name` 
+      `docker search <image_name>` 
 	  
 9.	<ins>To delete all images that are not attached to containers </ins>
 
@@ -66,12 +66,19 @@
 		
 ### Container Commands
 
-1.	To see the list of all running continers
+1.	<ins>To see the list of all running continers</ins>
  
 	  `docker  container  ls` 
-2.	To see the list of running and stopped containers
+	  
+	  `docker ps`
+	  
+2.	<ins>To see the list of running and stopped containers</ins>
  
       `docker   ps -a` 
+      
+3.      <ins>Run docker image</ins>
+
+        `docker run <image-name/image-id>`      
 	  
 3.	To start a container
  

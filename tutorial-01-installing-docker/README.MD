@@ -29,7 +29,7 @@
 ### Docker Terminologies 
     1. Dockerfile
     
-      		Dockerfile contains set of instructions to build docker image. In dockerfile we will specify which sotwares are required to run our code/application.
+      	Dockerfile contains set of instructions to build docker image. In dockerfile we will specify which sotwares are required to run our code/application.
    
     2. Docker Images   
 	
@@ -49,7 +49,7 @@
     
     6. Docker Registry
     
-    		Docker Registry is a place which is used to store docker images for future purpose 
+    	Docker Registry is a place which is used to store docker images for future purpose 
 
 		Ex: Docker Hub, Amazon ECR etc....
 		

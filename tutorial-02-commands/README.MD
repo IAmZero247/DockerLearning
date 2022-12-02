@@ -11,8 +11,7 @@
 1.	<ins>To download a docker image </ins>
 
 
-
-      `docker pull <image_name>`
+         `docker pull <image_name>`
 		
       	  ```
 	  Eg: 
@@ -27,7 +26,7 @@
 	  docker image ls 
 		(or) 
 	  docker images
-      ```		
+          ```		
 		
 3.	<ins>To delete a docker image from docker host </ins>
 

@@ -62,29 +62,36 @@ Then press 'R' to restart the session (This is in MobaXterm)
 		  
 		  
 ### Docker Terminologies 
-    1. Dockerfile
+    1. Docker File
+    =======================
+    
     
       	Dockerfile contains set of instructions to build docker image. In dockerfile we will specify which sotwares are required to run our code/application.
    
-    2. Docker Images   
+    2. Docker Images
+    =======================
 	
 		Combinations of binaries / libraries  + application code which are necessary for one software application.
 		
-    3. Docker Containers  
+    3. Docker Containers 
+    =======================
 	
 		When image is installed and in comes into running condition, it is called container. 
 		
 		Docker container is runtime instance of our application. When we run Docker Image it will create Docker Container. Inside Container our application and application dependencies will be available.
 		
     4. Docker Host
+    =======================
 	
 		Machine on which docker is installed, is called as Docker host.
 		
     5. Docker Client
+    =======================
 	
 		Terminal used to run docker run commands ( Git bash )
     
     6. Docker Registry
+    =======================
     
     	Docker Registry is a place which is used to store docker images for future purpose 
 

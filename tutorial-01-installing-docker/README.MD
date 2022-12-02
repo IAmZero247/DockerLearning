@@ -34,30 +34,31 @@
 
 3. Execute below commands to install Docker s/w
 
-'''
+```
 	$ sudo yum update -y
 	$ sudo yum install docker -y
 	$ sudo service docker start
-'''
+```
 
 4. Add ec2-user to docker group by executing below command (to give docker permissions to ec2-user accnt)
 
-'''
+```
 	$ sudo usermod -aG docker ec2-user
-'''
+```
 
 5. Close the terminal
 
-'''
+```
  	$ exit
-'''
+```
 
 Then press 'R' to restart the session (This is in MobaXterm)
 
-#execution below command to see docker status
-
-$ docker info
-      
+6. execution below command to see docker status
+```
+```
+	$ docker info
+```      
 		  
 		  
 ### Docker Terminologies 

@@ -27,10 +27,6 @@
       
 ### Installing Docker in AWS - Amazon Linux
 
-=======================
-Install Docker in Linux VM
-=======================
-
 
 1. Create Linux Virtual Machine using Amazon Linux AMI
 

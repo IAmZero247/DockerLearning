@@ -28,6 +28,74 @@
 		12. VOLUME
     ```	
 
+####  FROM
+1.  FROM keyword is used represent base image to create our our image
+
+2.  On Top of base image our image will be created
+
+```
+	Syntax: 
+
+	FROM java:jdk-1.8
+	FROM tomcat:9.5
+	FROM mysql:6.8
+	FROM python:3.3	
+```	
+
+
+####  MAINTAINER
+
+    MAINTAINER keyword is used to specify Dockerfile author information
+```
+	Syntax:
+
+	MAINTAINER  Zero <ruby4eyes@gmail.com>
+```
+
+
+
+####  COPY
+
+
+    COPY command is used to copy the files from source to destination while creating docker image
+
+```
+	Syntax:
+
+	COPY <source-location>  <destination-location>
+
+	Ex: 
+
+	COPY  target/sbi-app.war   /app/tomcat/webapps/sbi-app.war
+```
+
+
+
+####  ADD
+
+
+1.  ADD command is also used to copy files from source to destination while creating docker image
+
+```
+	Syntax:
+
+	ADD <source-location>  <destination-location>
+
+	ADD <url>  <destination-location>
+
+	Ex: 
+
+	ADD  <URL>   /app/tomcat/webapps/sbi-app.war
+```
+
+2.  What is the difference between COPY and ADD commands ?
+
+a. Using COPY command we can just copy the files from one path to another path with in the machine
+
+b. Using ADD command we can copy files from one path to another path and it supports source location as URL also.
+
+
+
 * If you do not specify the version, by default, we get latest version 
 
 	  

@@ -64,7 +64,7 @@
 
 	COPY <source-location>  <destination-location>
 
-	Ex: 
+	Example: 
 
 	COPY  target/sbi-app.war   /app/tomcat/webapps/sbi-app.war
 ```
@@ -83,7 +83,7 @@
 
 	ADD <url>  <destination-location>
 
-	Ex: 
+	Example: 
 
 	ADD  <URL>   /app/tomcat/webapps/sbi-app.war
 ```

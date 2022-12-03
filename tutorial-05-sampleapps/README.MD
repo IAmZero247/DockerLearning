@@ -94,24 +94,24 @@
 		COPY target/01-maven-web-app.war   /usr/local/tomcat/webapps/maven-web-app.war
 	   ```
 	   
-2. $ git clone https://github.com/ashokitschool/maven-web-app.git
+2. `$ git clone https://github.com/ashokitschool/java-maven-web-app.git`
 
-3. $ cd maven-web-app
+3. `$ cd java-maven-web-app`
 
-4. $ mvn clean package
+4. `$ mvn clean package`
 
-5. $ docker build -t maven-web-app .
+5. `$ docker build -t java-maven-web-app .`
 
-6. $ docker images
+6. `$ docker images`
 
-7. $ docker run -d -p 8080:8080 maven-web-app
+7. `$ docker run -d -p 8080:8080 java-maven-web-app`
 
-8. $ docker ps
+8. `$ docker ps`
 
-9. $ docker logs <container-id>
+9. `$ docker logs <container-id>`
 
 
-10. URL To access The Application :   http://ec2-vm-public-ip:host-port/maven-web-app/
+10. URL To access The Application :  `http://ec2-vm-public-ip:host-port/java-maven-web-app/`
 
-    1. Note: In the above url "maven-web-app" is called as context path (name of the war file will become context path)
+    1. Note: In the above url "java-maven-web-app" is called as context path (name of the war file will become context path)
 	

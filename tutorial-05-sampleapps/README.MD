@@ -10,7 +10,7 @@
 2. Below are the Dockerfile Keywords
 
     ```
-			1.  FROM
+		1.  FROM
 		2.  MAINTAINER
 		3.  COPY
 		4.  ADD

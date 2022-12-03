@@ -4,7 +4,7 @@
 
 
 
-### Dockerfile
+### <ins>Dockerfile</ins>
 1.  Dockerfile contains instructions to build docker image
 
 2.  In Dockerfile we will use DSL (Domain Specific Language) keywords
@@ -28,7 +28,7 @@
 		12. VOLUME
     ```	
 
-####  FROM
+####  <ins>FROM</ins>
 1.   FROM keyword is used represent base image to create our our image
 
 2.   On Top of base image our image will be created
@@ -43,7 +43,7 @@
 ```	
 
 
-####  MAINTAINER
+####  <ins>MAINTAINER</ins>
 
 1.  MAINTAINER keyword is used to specify Dockerfile author information
 ```
@@ -54,7 +54,7 @@
 
 
 
-####  COPY
+####  <ins>COPY</ins>
 
 
     COPY command is used to copy the files from source to destination while creating docker image
@@ -71,7 +71,7 @@
 
 
 
-####  ADD
+####  <ins>ADD</ins>
 
 
 1.  ADD command is also used to copy files from source to destination while creating docker image
@@ -88,14 +88,14 @@
 	ADD  <URL>   /app/tomcat/webapps/sbi-app.war
 ```
 
-### Q: What is the difference between COPY and ADD commands ?
+#### Q: What is the difference between COPY and ADD commands ?
 
 1. Using COPY command we can just copy the files from one path to another path with in the machine
 
 2. Using ADD command we can copy files from one path to another path and it supports source location as URL also.
 
 
-###  RUN
+####  <ins>RUN</ins>
 
 
 1. RUN instructions will execute while creating the image
@@ -114,7 +114,7 @@ Example:
 ```
 
 
-###  CMD
+####  <ins>CMD</ins>
 
 
 1. CMD instructions will execute while creating the container
@@ -131,7 +131,7 @@ Example:
 CMD  sudo start tomcat
 ```
 
-###  Q: What is the difference between RUN and CMD in Dockerfile ?
+####  Q: What is the difference between RUN and CMD in Dockerfile ?
 
 1.  RUN is used to execute instructions while creating image
 
@@ -143,7 +143,7 @@ CMD  sudo start tomcat
 
 
 
-###	 ENTRYPOINT
+####	 <ins>ENTRYPOINT</ins>
 
 
 1. ENTRYPOINT instructions will execute while creating container
@@ -156,14 +156,14 @@ CMD  sudo start tomcat
 	ENTRYPOINT [  "java" , "-jar" , "target/boot-app.jar"  ]
 ```
 
-### Q: What is the difference between CMD and ENTRYPOINT ?
+#### Q: What is the difference between CMD and ENTRYPOINT ?
 
 1. We can override CMD instructions in runtime while creating container
 
 2. We can't override ENTRYPOINT instructions
 
 
-###  WORKDIR
+####  <ins>WORKDIR</ins>
 
 
 1. It is used to set working directory for an image / container
@@ -177,7 +177,7 @@ CMD  sudo start tomcat
 ```
 
 
-###   ENV
+####   <ins>ENV</ins>
 
 
 1. ENV is used to set Environment Variables
@@ -192,7 +192,7 @@ CMD  sudo start tomcat
 
 
 
-###  ARG
+####  <ins>ARG</ins>
 
 
 1.  It is used to remove hard coded values
@@ -212,7 +212,7 @@ $ docker build -t imageone --build-arg branch=master
 ```
 
 
-###  USER
+####  <ins>USER</ins>
 
 
 1.  We can set user for creating image / container
@@ -221,7 +221,7 @@ $ docker build -t imageone --build-arg branch=master
 
 
 
-### EXPOSE
+#### <ins>EXPOSE</ins>
 
 
 1. It is used to specify our container running PORT
@@ -236,7 +236,7 @@ EXPOSE 8080
 
  
 
-###  VOLUME
+####  <ins>VOLUME</ins>
 
 
 1. VOLUME is used to specify docker container data storage location.

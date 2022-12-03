@@ -24,31 +24,31 @@
 		12. VOLUME
     ```	
 
-####  <ins>SpringBoot App</ins>
+###  <ins>SpringBoot App</ins>
 
-1. Spring Boot App Git Repo URL : https://github.com/ashokitschool/spring-boot-docker-app.git
+1. Spring Boot App Git Repo URL : `https://github.com/ashokitschool/spring-boot-docker-app.git`
 
 2. #### <ins>install git client s/w</ins>
-$ sudo yum install git
+`$ sudo yum install git`
 
-3. ##### install maven s/w
-$ sudo yum install maven
+3. #### <ins>install maven s/w</ins>
+`$ sudo yum install maven`
 
-4. #### Clone Git Repo
-$ git clone https://github.com/ashokitschool/spring-boot-docker-app.git
+4. #### <ins>Clone Git Repo</ins>
+`$ git clone https://github.com/ashokitschool/spring-boot-docker-app.git`
 
-5. # Navigating to project folder
+5. #### <ins>Navigating to project folder</ins>
 $ cd spring-boot-docker-app
 
-6. # execute maven goals
+6. #### <ins>Execute maven goals</ins>
 $ mvn clean package
 
 Note: After package got success, we can see project jar file in target folder.
 
-# create docker image
+#### <ins>Create docker image</ins>
 $ docker build -t sb-app .
 
-# run docker image with port mapping
+#### <ins>Run docker image with port mapping</ins>
 $ docker run -p 8080:8080 sb-app
 
 Note: Enable 8080 port number in EC2 VM security group

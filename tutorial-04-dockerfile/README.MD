@@ -266,7 +266,12 @@ CMD echo "Hi, i am CMD-2"
 
 1. Save the above content in docker file
 
-			default-filename : Dockerfile
+```
+	default-filename : Dockerfile
+	
+	or save as -> mydockerfile
+```	
+	
 2.  Command to create docker image using dockerfile
 
 ```
@@ -283,7 +288,8 @@ CMD echo "Hi, i am CMD-2"
 4.  We can use customized name  for the dockerfile. When we change dockerfile name we need to pass filename as input for docker build command using -f option like below.
    
 ```
-   $ docker build -f <dockerfile-name>  -t <image-name> .
+    $ docker build -f <dockerfile-name>  -t <image-name> .
+	$ docker build -f mydockerfile  -t myfirstimage .
 ```	
    
 5.  Command to login with dockerhub account

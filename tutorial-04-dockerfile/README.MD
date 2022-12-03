@@ -1,3 +1,59 @@
+# Docker Tutorial 03   
+
+
+
+
+
+### Dockerfile
+1.  Dockerfile contains instructions to build docker image
+
+2.  In Dockerfile we will use DSL (Domain Specific Language) keywords
+
+3.  Docker engine will process Dockerfile instructions from top to bottom
+
+4.  Below are the Dockerfile Keywords
+
+    ```
+	        1.  FROM
+		2.  MAINTAINER
+		3.  COPY
+		4.  ADD
+		5.  RUN
+		6.  CMD
+		7.  ENTRYPOINT
+		8.  ENV
+		9.  LABEL
+		10. WORKDIR
+		11. EXPOSE
+		12. VOLUME
+    ```	
+
+####  FROM
+1.   FROM keyword is used represent base image to create our our image
+
+2.   On Top of base image our image will be created
+
+```
+	Syntax: 
+
+	FROM java:jdk-1.8
+	FROM tomcat:9.5
+	FROM mysql:6.8
+	FROM python:3.3	
+```	
+
+
+####  MAINTAINER
+
+1.  MAINTAINER keyword is used to specify Dockerfile author information
+```
+	Syntax:
+
+	MAINTAINER  Zero <ruby4eyes@gmail.com>
+```
+
+
+
 ####  COPY
 
 

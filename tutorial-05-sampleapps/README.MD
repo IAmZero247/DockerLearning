@@ -80,8 +80,8 @@
 	 	 
 ###  <ins>Dockerizing Java Web Application (Without SpringBoot)</ins>
 
-1. Java Web App Git Repo URL : `https://github.com/ashokitschool/java-maven-web-app.git`
-   1. Java web applictaions will be packaged as war file
+1. Java Web App Git Repo URL : `https://github.com/IAmZero247/java-maven-web-app.git`
+   1. Java web applictaions will be packaged as warIAmZero247file
    2. WAR (Web Archive) contains application code
    3. To run the war file we need webserver (Ex: Apache Tomcat)
    4. We need to deploy war file in Tomcat Server for Execution
@@ -94,7 +94,7 @@
 		COPY target/01-maven-web-app.war   /usr/local/tomcat/webapps/maven-web-app.war
 	   ```
 	   
-2. `$ git clone https://github.com/ashokitschool/java-maven-web-app.git`
+2. `$ git clone https://github.com/IAmZero247/java-maven-web-app.git`
 
 3. `$ cd java-maven-web-app`
 
@@ -115,3 +115,47 @@
 
     1. Note: In the above url "java-maven-web-app" is called as context path (name of the war file will become context path)
 	
+
+###  <ins>Dockerizing Python Flask App</ins>	
+
+1. Python Flask app Git Repo URL: https://github.com/IAmZero247/python-flask-docker-app.git
+    1. Python is a general purpose scripting language
+	2. Python programs will have .py as extension
+    3. Compilation is not required for python programs
+	4. Docker File   
+	   ```
+		FROM python:3.6
+
+		MAINTAINER Ashok Bollepalli "ashokitschool@gmail.com"
+
+		COPY . /app
+
+		WORKDIR /app
+
+		EXPOSE 5000
+
+		RUN pip install -r requirements.txt
+
+		ENTRYPOINT ["python", "app.py"]
+	   ```
+2. `$ git clone https://github.com/IAmZero247/python-flask-docker-app.git`
+
+3. `$ cd python-flask-docker-app`
+
+4. `$ docker build -t python-flask-app .`
+
+5. `$ docker images`
+
+6. `$ docker run -d -p 5000:5000 python-flask-app`
+
+7. `$ docker ps`
+
+8. `$ docker logs <container-id>` 
+
+
+9. #### <ins>Command to enter into docker container</ins>
+   $ docker exec -it <container-id> /bin/bash
+
+   1. Note: Execute 'exit' command to come out from docker container vm.
+	   
+	   

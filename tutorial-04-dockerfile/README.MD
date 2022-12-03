@@ -244,3 +244,85 @@ EXPOSE 8080
 2. Volumes are used for storage.
 
 
+###  <ins>Lab</ins>
+
+
+```
+FROM ubuntu
+
+MAINTAINER Zero<ruby4eyes@gmail.com>
+
+RUN echo "Hi, i am RUN-1"
+
+RUN echo "Hi, i am RUN-2"
+
+CMD echo "Hi, I am CMD-1"
+
+RUN echo "Hi, i am RUN-3"
+
+CMD echo "Hi, i am CMD-2"
+
+```
+
+1. Save the above content in docker file
+
+			default-filename : Dockerfile
+2.  Command to create docker image using dockerfile
+
+```
+    Syntax :   $ docker build  -t  <image-name>  .
+
+    Ex :   $ docker build  -t  myfirstimage  .
+```  
+3.  Command to run docker image
+
+```
+    $ docker run myfirstimage 
+```
+
+4.  We can use customized name  for the dockerfile. When we change dockerfile name we need to pass filename as input for docker build command using -f option like below.
+   
+```
+   $ docker build -f <dockerfile-name>  -t <image-name> .
+```	
+   
+5.  Command to login with dockerhub account
+
+```
+		$ docker login
+``` 
+Note: We need to enter our dockerhub account credentials correctly (it will ask only first time)
+
+6.  Command to tag our docker image
+
+```
+	$ docker tag  <image-name>  <tag-name>
+
+	Ex:  $ docker tag myfirstimage ruby4eyes/myfirstimage
+```
+
+7.  Command to push docker image to docker hub account
+
+```
+	$ docker push <tag-name>
+	 
+	$ docker push  ruby4eyes/myfirstimage
+```
+
+8.  Delete all unused images and stopped containers
+
+```
+	$ docker system prune -a
+```
+
+9.  Pull the image from docker hub
+
+```
+	$ docker pull ruby4eyes/myfirstimage
+```
+
+10. Run the image
+
+```
+	$ docker run ruby4eyes/myfirstimage 
+```

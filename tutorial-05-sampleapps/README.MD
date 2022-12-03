@@ -43,7 +43,7 @@
 6. #### <ins>Execute maven goals</ins>
 	`$ mvn clean package`
 
-Note: After package got success, we can see project jar file in target folder.
+    1. Note: After package got success, we can see project jar file in target folder.
 
 7. #### <ins>Create docker image</ins>
 	`$ docker build -t sb-app .`
@@ -51,8 +51,8 @@ Note: After package got success, we can see project jar file in target folder.
 8. #### <ins>Run docker image with port mapping</ins>
 	`$ docker run -p 8080:8080 sb-app`
 
-		Note: Enable 8080 port number in EC2 VM security group
+	1.	Note: Enable 8080 port number in EC2 VM security group
 
-		URL To Access Application :   `http://ec2-vm-public-ip:8080/welcome/Ruby`
+	2.	URL To Access Application :   `http://ec2-vm-public-ip:8080/welcome/Ruby`
 
 

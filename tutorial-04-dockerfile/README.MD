@@ -282,14 +282,14 @@ CMD echo "Hi, i am CMD-2"
 3.  Command to run docker image
 
 ```
-    $ docker run myfirstimage 
+		$ docker run myfirstimage 
 ```
 
 4.  We can use customized name  for the dockerfile. When we change dockerfile name we need to pass filename as input for docker build command using -f option like below.
    
 ```
-    $ docker build -f <dockerfile-name>  -t <image-name> .
-	$ docker build -f mydockerfile  -t myfirstimage .
+		$ docker build -f <dockerfile-name>  -t <image-name> .
+		$ docker build -f mydockerfile  -t myfirstimage .
 ```	
    
 5.  Command to login with dockerhub account

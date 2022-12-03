@@ -28,13 +28,13 @@
 
 1. Spring Boot App Git Repo URL : https://github.com/ashokitschool/spring-boot-docker-app.git
 
-2. # install git client s/w
+2. ###### install git client s/w
 $ sudo yum install git
 
-3. # install maven s/w
+3. ####### install maven s/w
 $ sudo yum install maven
 
-4. # Clone Git Repo
+4. ###### Clone Git Repo
 $ git clone https://github.com/ashokitschool/spring-boot-docker-app.git
 
 5. # Navigating to project folder

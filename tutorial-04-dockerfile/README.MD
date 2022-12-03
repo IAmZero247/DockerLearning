@@ -267,68 +267,69 @@ CMD echo "Hi, i am CMD-2"
 1. Save the above content in docker file
 
 ```
-	default-filename : Dockerfile
+default-filename : Dockerfile
 	
-	or save as -> mydockerfile
+or save as -> mydockerfile
 ```	
 	
 2.  Command to create docker image using dockerfile
 
 ```
-    Syntax :   $ docker build  -t  <image-name>  .
+Syntax :   $ docker build  -t  <image-name>  .
 
-    Ex :   $ docker build  -t  myfirstimage  .
+Ex :   $ docker build  -t  myfirstimage  .
 ```  
 3.  Command to run docker image
 
 ```
-		$ docker run myfirstimage 
+$ docker run myfirstimage 
 ```
 
 4.  We can use customized name  for the dockerfile. When we change dockerfile name we need to pass filename as input for docker build command using -f option like below.
    
 ```
-		$ docker build -f <dockerfile-name>  -t <image-name> .
-		$ docker build -f mydockerfile  -t myfirstimage .
+$ docker build -f <dockerfile-name>  -t <image-name> .
+
+$ docker build -f mydockerfile  -t myfirstimage .
 ```	
    
 5.  Command to login with dockerhub account
 
 ```
-	$ docker login
+$ docker login
 ``` 
 Note: We need to enter our dockerhub account credentials correctly (it will ask only first time)
 
 6.  Command to tag our docker image
 
 ```
-	$ docker tag  <image-name>  <tag-name>
+$ docker tag  <image-name>  <tag-name>
 
-	Ex:  $ docker tag myfirstimage ruby4eyes/myfirstimage
+Ex:  $ docker tag myfirstimage ruby4eyes/myfirstimage
 ```
 
 7.  Command to push docker image to docker hub account
 
 ```
-	$ docker push <tag-name>
+$ docker push <tag-name>
 	 
-	$ docker push  ruby4eyes/myfirstimage
+$ docker push  ruby4eyes/myfirstimage
 ```
 
 8.  Delete all unused images and stopped containers
 
 ```
-	$ docker system prune -a
+$ docker system prune -a
 ```
 
 9.  Pull the image from docker hub
 
 ```
-	$ docker pull ruby4eyes/myfirstimage
+$ docker pull ruby4eyes/myfirstimage
 ```
 
 10. Run the image
 
 ```
-	$ docker run ruby4eyes/myfirstimage 
+$ docker run ruby4eyes/myfirstimage 
 ```

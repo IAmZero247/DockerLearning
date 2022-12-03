@@ -289,7 +289,7 @@ CMD echo "Hi, i am CMD-2"
 5.  Command to login with dockerhub account
 
 ```
-		$ docker login
+	$ docker login
 ``` 
 Note: We need to enter our dockerhub account credentials correctly (it will ask only first time)
 

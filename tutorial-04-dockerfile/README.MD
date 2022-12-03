@@ -131,7 +131,7 @@ Example:
 CMD  sudo start tomcat
 ```
 
-###  Q) What is the difference between RUN and CMD in Dockerfile ?
+###  Q: What is the difference between RUN and CMD in Dockerfile ?
 
 1.  RUN is used to execute instructions while creating image
 
@@ -142,5 +142,105 @@ CMD  sudo start tomcat
 4.  If we write multiple CMD instructions in Dockerfile, docker willl process only last CMD instruction.
 
 
+
+###	 ENTRYPOINT
+
+
+1. ENTRYPOINT instructions will execute while creating container
+
+```
+	Syntax:
+
+	ENTRYPOINT [ "echo"  , "Welcome to Ashok IT" ]
+
+	ENTRYPOINT [  "java" , "-jar" , "target/boot-app.jar"  ]
+```
+
+### Q: What is the difference between CMD and ENTRYPOINT ?
+
+1. We can override CMD instructions in runtime while creating container
+
+2. We can't override ENTRYPOINT instructions
+
+
+###  WORKDIR
+
+
+1. It is used to set working directory for an image / container
+
+2. The Dockerfile instructions which are available after WORKDIR  those instructions will be processed from given working directory.
+
+```
+	Example: 
+
+	WORKDIR     /app/
+```
+
+
+###   ENV
+
+
+1. ENV is used to set Environment Variables
+
+```
+	Example:
+
+	ENV <key> <value>
+
+	ENV   java   /etc/softwares/java
+```
+
+
+
+###  ARG
+
+
+1.  It is used to remove hard coded values
+
+2.  Using ARG we can pass values in the runtime like below
+
+```
+Example:
+
+ARG branch
+
+RUN git clone -b $branch <repo-url>
+
+Useage:
+
+$ docker build -t imageone --build-arg branch=master
+```
+
+
+###  USER
+
+
+1.  We can set user for creating image / container
+
+2.  After USER instruction all the remaining commands will execute with given user permissions
+
+
+
+### EXPOSE
+
+
+1. It is used to specify our container running PORT
+
+2. It is just like a documentation command to provide container running port number.
+
+```
+Example: 
+
+EXPOSE 8080
+```
+
+ 
+
+###  VOLUME
+
+
+1. VOLUME is used to specify docker container data storage location.
+
+2. Volumes are used for storage.
 
 

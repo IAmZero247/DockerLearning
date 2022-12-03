@@ -154,7 +154,7 @@
 
 
 9. #### <ins>Command to enter into docker container</ins>
-   $ docker exec -it <container-id> /bin/bash
+   `$ docker exec -it <container-id> /bin/bash`
 
    1. Note: Execute 'exit' command to come out from docker container vm.
 	   

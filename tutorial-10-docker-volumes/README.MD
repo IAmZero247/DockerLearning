@@ -18,9 +18,9 @@
 
 2. We have 3 types of volumes in Docker
 
-			1) <ins>Anonymous Volumes</ins> (without name)
+			1) <ins>Anonymous Volumes</ins> ( Without name )
 
-			2) <ins>Named Volumes</ins> (Will have a name) ----> Recommended
+			2) <ins>Named Volumes</ins> ( Will have a name ) ----> Recommended
 
 			3) <ins>Bind Mounts</ins> ( Storing on Host Machine )
 

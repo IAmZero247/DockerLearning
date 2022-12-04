@@ -192,20 +192,21 @@ $ docker-compose down   --> this will remove volumes to
     
       ```
 	  ---
-      version: '3'
+      version: "3"
 
       services:
-		mydb:
-			image: mysql:5
-			environment:
-			MYSQL_ROOT_PASSWORD: mypass
+        mydb:
+          image: mysql:5
+          environment:
+            MYSQL_ROOT_PASSWORD: mypass
 
-		mywp:
-			image: wordpress
-			ports:
-			  - 5050:80
-            	links:
-			  - mydb:mysql-wp-l1
+        mywp:
+          image: wordpress
+          ports:
+            - 5050:80
+          links:
+            - mydb:mysql-wp-l1
+
       ---
 
 	  :wq

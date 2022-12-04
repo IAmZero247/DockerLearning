@@ -66,7 +66,14 @@
 7. #### <ins>Create docker image</ins>
 	`$ docker build -t sb-app .`
 
-8. #### <ins>Run docker image with port mapping</ins>
+8. #### <ins>Tag Image and push to docker hub</ins>
+	`$ docker  tag sb-app ruby4eyes/sb-app`	
+
+9. #### <ins>Pull image from docker hub</ins>
+	`$ docker system prune -a`	
+    `$ docker pull ruby4eyes/sb-app`
+
+10. #### <ins>Run docker image with port mapping</ins>
 	`$ docker run -p 8080:8080 sb-app`
 	
 	`$ docker run -d -p 8080:8080 ruby4eyes/sb-app `
@@ -75,7 +82,7 @@
 
 	2.	URL To Access Application :   `http://ec2-vm-public-ip:8080/welcome/Ruby`
 
-9. 	#### <ins>We can check logs of the container using below command</ins>
+11. 	#### <ins>We can check logs of the container using below command</ins>
      `$ docker logs <container-id>`
 	 	 
 ###  <ins>Dockerizing Java Web Application (Without SpringBoot)</ins>

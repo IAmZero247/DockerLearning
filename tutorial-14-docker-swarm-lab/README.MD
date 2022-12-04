@@ -45,7 +45,7 @@ dvlkuzr46h2p   sb-app    replicated   4/4        ruby4eyes/sb-app:latest   *:808
 ```
 
 ### <ins>Inspect docker service</ins>
-`$ sudo docker service inspect --pretty <service-name>`
+`$ docker service inspect --pretty <service-name>`
 
 ```
 ID:             dvlkuzr46h2p7sks517ubtymi
@@ -79,10 +79,10 @@ Ports:
 ```
 
 ### <ins>See service details</ins>
-`$ sudo docker service ps <service-name>`
+`$ docker service ps <service-name>`
 
 ```
-$ sudo docker service ps sb-app
+$ docker service ps sb-app
 
 ID             NAME       IMAGE                     NODE               DESIRED STATE   CURRENT STATE           ERROR     PORTS
 n3eg29r2goo6   sb-app.1   ruby4eyes/sb-app:latest   ip-172-31-88-166   Running         Running 5 minutes ago
@@ -93,9 +93,9 @@ levim5gpdvhn   sb-app.4   ruby4eyes/sb-app:latest   ip-172-31-90-61    Running  
 ```
 
 ### <ins>Remove one node from swarm cluster</ins>
-`$ sudo docker swarm leave`
+`$ docker swarm leave`
 
 ### <ins>Remove docker service</ins> 
-`$ sudo docker service rm <service-name>`
+`$ docker service rm <service-name>`
 
 

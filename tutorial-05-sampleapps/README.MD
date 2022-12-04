@@ -70,8 +70,10 @@
 	`$ docker  tag sb-app ruby4eyes/sb-app`	
 
 9. #### <ins>Pull image from docker hub</ins>
-	`$ docker system prune -a`	
-    `$ docker pull ruby4eyes/sb-app`
+	```
+	$ docker system prune -a	
+    $ docker pull ruby4eyes/sb-app
+	```
 
 10. #### <ins>Run docker image with port mapping</ins>
 	`$ docker run -p 8080:8080 sb-app`

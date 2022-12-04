@@ -103,7 +103,7 @@
 	   ```
 	    FROM tomcat:8.0.20-jre8
 
-		COPY target/01-maven-web-app.war   /usr/local/tomcat/webapps/maven-web-app.war
+		COPY target/java-maven-web-app.war   /usr/local/tomcat/webapps/maven-web-app.war
 	   ```
 	   
 2. `$ git clone https://github.com/IAmZero247/java-maven-web-app.git`
@@ -133,7 +133,7 @@
 
 ###  <ins>Dockerizing Python Flask App</ins>	
 
-1. Python Flask app Git Repo URL: https://github.com/IAmZero247/python-flask-docker-app.git
+1. Python Flask app Git Repo URL: `https://github.com/IAmZero247/python-flask-docker-app.git`
     1. Python is a general purpose scripting language
 	2. Python programs will have .py as extension
     3. Compilation is not required for python programs
@@ -172,5 +172,37 @@
    `$ docker exec -it <container-id> /bin/bash`
 
    1. Note: Execute 'exit' command to come out from docker container vm.
+
+10. URL To access The Application :  `http://ec2-vm-public-ip:host-port/`   
+   
+###  <ins>Dockerizing Reack App</ins>	
+
+1. React app Git Repo URL: `https://github.com/IAmZero247/react-docker-app.git`  
+   1. Docker File   
+       ```
+		FROM node:latest
+		WORKDIR /app
+		COPY package.json ./
+		RUN npm install
+		COPY . .
+		CMD ["npm", "start"]
+	   ```  
+	   
+2. `$ git clone https://github.com/IAmZero247/react-docker-app.git`
+
+3. `$ cd react-docker-app`
+
+4. `$ docker build -t react-docker-app .`
+
+5. `$ docker images`
+
+6. `$ docker run -d -p 3000:3000 react-docker-app`
+
+7. `$ docker ps`
+
+8. `$ docker logs <container-id>` 
+	   
+9. URL To access The Application :  `http://ec2-vm-public-ip:host-port/`   
+    
 	   
 	   

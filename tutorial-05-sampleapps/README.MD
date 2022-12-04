@@ -67,7 +67,10 @@
 	`$ docker build -t sb-app .`
 
 8. #### <ins>Tag Image and push to docker hub</ins>
-	`$ docker  tag sb-app ruby4eyes/sb-app`	
+	```
+	$ docker  tag sb-app ruby4eyes/sb-app
+	$ docker push ruby4eyes/sb-app
+	```
 
 9. #### <ins>Pull image from docker hub</ins>
 	```

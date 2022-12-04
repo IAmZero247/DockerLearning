@@ -1,4 +1,4 @@
-# Docker Tutorial 03
+# Docker Tutorial 11
 
 With a working container we need to attach a volume to it
 
@@ -34,7 +34,7 @@ CMD [ "php", "./run.php" ]
 
 ### Instead of building
 
-`docker run -it --rm --name php-runner -v C:\Users\miner10\Documents\GitHub\learning-docker\tutorial-03\src:/usr/src/myapp -w /usr/src/myapp php:7.2-cli php run.php`
+`docker run -it --rm --name php-runner -v C:\Users\ruby\Documents\GitHub\DockerLearning\tutorial-11-php-container-little-bit-theory\src:/usr/src/myapp -w /usr/src/myapp php:7.2-cli php run.php`
 
 ```
 --rm=false: Automatically remove the container when it exits

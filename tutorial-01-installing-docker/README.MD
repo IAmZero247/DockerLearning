@@ -44,6 +44,7 @@
 
 ```
 	$ sudo usermod -aG docker ec2-user
+	$ sudo reboot
 ```
 
 5. Close the terminal

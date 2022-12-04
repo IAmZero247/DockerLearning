@@ -1,16 +1,14 @@
-
-
----
 version: "3"
 services:
   application:
     image: ruby4eyes/spring-boot-mysql-app
-    networks:
-      - springboot-mysqldb-net
     ports:
       - "8080:8080"
+    networks:
+      - springboot-mysqldb-net
     depends_on:
       - mysqldb
+    
   mysqldb:
     image: mysql:5.7
     networks:
@@ -18,6 +16,6 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=sbms
+    
 networks:
-  - springboot-mysqldb-net:
-...
+  springboot-mysqldb-net:

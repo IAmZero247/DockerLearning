@@ -1,12 +1,54 @@
-# Docker Tutorial 04 - Multi Container Architecture Using Docker   
+# Docker Tutorial 09 - Multi Container Architecture Using Docker   
 
 1. link (adhoc way)
 2. docker-compose
 
-## Docker Compose
------------------ 
+## <ins>Docker Compose</ins>
 
-### Docker Compose Setup
+1. In Microservices Application , Application functionality will be developed as micro services (rest apis). Every functionality will be developed as individual project (individual API)
+2. Every API should run in a seperate container
+3. Running Multiple containers manully for all the apis is difficult job
+4. To solve this problem Docker-Compose came into picture
+5. Docker Compose is a tool which is used to manage multi container based applications
+6. Using Docker Compose we can easily setup & deploy multi container based applications
+7. We will give containers information to Docker Compose using YML file  (docker-compose.yml)
+8. Docker Compose YML should have all the information related to containers creation
+9. Structure of docker compose file
+```
+	======================
+	Docker Compose YML File
+	======================
+
+	version:
+
+	services:
+
+	network:
+
+	volumes:
+
+	=====================
+```
+
+10.  Docker Compose default file name is  "docker-compose.yml"
+
+#### <ins>Create Containers using Docker</ins>
+$ docker-compose up
+
+#### <ins>Create Containers using Docker Compose with custom file name</ins>
+$ docker-compose -f <filename> up
+
+#### <ins>Display Containers created by Docker Compose</ins>
+$ docker-compose ps
+
+#### <ins>Display docker compose images</ins>
+$ docker-compose images
+
+#### <ins>Stop & remove the containers created by docker compose</ins>
+$ docker-compose stop
+$ docker-compose down
+
+### <ins>Docker Compose Setup</ins>
 
 	  
 1.	Open https://docs.docker.com/compose/install/ 
@@ -17,14 +59,16 @@
 	  ```
 	  # sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 	  
-	  #sudo chmod +x /usr/local/bin/docker-compose
+	  # sudo chmod +x /usr/local/bin/docker-compose
+	  
+	  # sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 	  ```		
 		
 3.	Verification
 
       `docker-compose  --version`	  
 		
-### Validate YAML
+### <ins>Validate YAML</ins>
 
 1.  Open  http://www.yamllint.com/
 
@@ -33,7 +77,6 @@
 
 
 ### Name of the file should be docker-compose.yml
-
 
 ### Use case : Creating development environment using docker (MySQL + Wordpress)
 

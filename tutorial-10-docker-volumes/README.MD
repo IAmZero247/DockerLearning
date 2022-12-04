@@ -37,13 +37,13 @@
 #### <ins>Delete all dangling volumes</ins>
 `$ docker-compose u$ docker volume rm $(docker volume ls -q -f dangling=true)`
 
-#### <ins>Create Docker volume</ins>
+#### <ins>Create docker volume</ins>
 `$ docker volume create <vol-name>`
 
 #### <ins>Display all docker volumes</ins>
 `$ docker volume ls`
 
-#### <ins>Inspect Docker Volume</ins>
+#### <ins>Inspect docker volume</ins>
 `$ docker volume inspect <vol-name>`
 
 #### <ins>Delete docker volume</ins>

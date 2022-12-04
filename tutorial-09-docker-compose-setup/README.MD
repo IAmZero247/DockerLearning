@@ -33,21 +33,22 @@
 10.  Docker Compose default file name is  "docker-compose.yml"
 
 #### <ins>Create Containers using Docker</ins>
-$ docker-compose up
+`$ docker-compose up`
 
 #### <ins>Create Containers using Docker Compose with custom file name</ins>
-$ docker-compose -f <filename> up
+`$ docker-compose -f <filename> up`
 
 #### <ins>Display Containers created by Docker Compose</ins>
-$ docker-compose ps
+`$ docker-compose ps`
 
 #### <ins>Display docker compose images</ins>
-$ docker-compose images
+`$ docker-compose images`
 
 #### <ins>Stop & remove the containers created by docker compose</ins>
+```
 $ docker-compose stop
-$ docker-compose down
-
+$ docker-compose down   --> this will remove volumes to 
+```
 ### <ins>Docker Compose Setup</ins>
 
 	  

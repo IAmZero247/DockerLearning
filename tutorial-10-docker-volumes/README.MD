@@ -74,5 +74,21 @@
 ```
 
 ### <ins>Docker Volume - BindMounts</ins>
+
+```
+# make a directory in bindvol and give permission 
+  mkdir /home/ec2-user/bindvol
+  chmod 777 /home/ec2-user/bindvol
+
+
+docker-compose-with-mysql-and-bindmounts
+
+docker-compose  -f docker-compose-with-mysql-and-bindmounts.yml up -d
+
+docker-compose  -f docker-compose-with-mysql-and-bindmounts.yml stop
+ 
+docker-compose  -f docker-compose-with-mysql-and-bindmounts.yml down
+
+```
 	  
 	  

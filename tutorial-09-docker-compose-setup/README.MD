@@ -62,6 +62,7 @@ $ docker-compose down   --> this will remove volumes to
 	  
 	  # sudo chmod +x /usr/local/bin/docker-compose
 	  
+	  Creating symbolic link
 	  # sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 	  ```		
 		
@@ -123,17 +124,25 @@ $ docker-compose down   --> this will remove volumes to
 ```
 	$ docker build -t spring-boot-mysql-app .
 	
-	$ docker build -tag spring-boot-mysql-app ruby4eyes/spring-boot-mysql-app
+	$ docker tag spring-boot-mysql-app ruby4eyes/spring-boot-mysql-app
 	
-	# docker push
+	$ docker push ruby4eyes/spring-boot-mysql-app
+	
+	$ docker system prune -af  
 ```	
 
 7. ##### Check docker image created or not
 `$ docker images`
 
-8. ##### Run containers using docker compose ( docker-compose.yml available )
-`$ docker-compose up -d`
-
+8. ##### Run /Stop containers using docker compose ( docker-compose.yml available )
+```
+	$ docker-compose  -f docker-compose-with-mysql.yml up -d
+	
+	$ docker-compose  -f docker-compose-with-mysql.yml stop
+	
+	$ docker-compose  -f docker-compose-with-mysql.yml down
+	
+```
 9. ##### Check containers which are created
 `$ docker-compose ps`
 

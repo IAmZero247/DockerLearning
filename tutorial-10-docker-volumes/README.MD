@@ -54,8 +54,24 @@
 
 
 ### <ins>Docker Volume - Anonymous Volumes</ins>
+
+```
+ docker-compose  -f docker-compose-with-mysql-and-anonymous-volume.yml up -d
+
+ docker-compose  -f docker-compose-with-mysql-and-anonymous-volume.yml stop
+ 
+ docker-compose  -f docker-compose-with-mysql-and-anonymous-volume.yml down
+```
 	  
 ### <ins>Docker Volume - Named Volumes</ins>
+
+```
+ docker-compose  -f docker-compose-with-mysql-and-named-volume.yml up -d
+
+ docker-compose  -f docker-compose-with-mysql-and-named-volume.yml stop
+ 
+ docker-compose  -f docker-compose-with-mysql-and-named-volume.yml down
+```
 
 ### <ins>Docker Volume - BindMounts</ins>
 	  

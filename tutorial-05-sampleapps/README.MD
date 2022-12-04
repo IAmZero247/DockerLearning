@@ -68,7 +68,7 @@
 
 8. #### <ins>Tag Image and push to docker hub</ins>
 	```
-	$ docker  tag sb-app ruby4eyes/sb-app
+	$ docker tag sb-app ruby4eyes/sb-app
 	$ docker push ruby4eyes/sb-app
 	```
 
@@ -114,17 +114,20 @@
 
 5. `$ docker build -t java-maven-web-app .`
 
-6. `$ docker images`
+6. `$ docker tag java-maven-web-app ruby4eyes/java-maven-web-app`
 
-7. `$ docker run -d -p 8080:8080 java-maven-web-app`
+7. `$ docker push ruby4eyes/java-maven-web-app`
 
-8. `$ docker ps`
+8. `$ docker images`
 
-9. `$ docker logs <container-id>`
+9. `$ docker run -d -p 8080:8080 java-maven-web-app`
+
+10. `$ docker ps`
+
+11. `$ docker logs <container-id>`
 
 
-10. URL To access The Application :  `http://ec2-vm-public-ip:host-port/java-maven-web-app/`
-
+12. URL To access The Application :  `http://ec2-vm-public-ip:host-port/maven-web-app`
     1. Note: In the above url "java-maven-web-app" is called as context path (name of the war file will become context path)
 	
 

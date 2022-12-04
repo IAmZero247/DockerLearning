@@ -81,11 +81,11 @@ $ docker-compose down   --> this will remove volumes to
 
 ### Use case : Spring Boot with MySQL using Docker Compose
 
-1. Spring Boot App with MySQL DB Git repo URL 
+1. ##### Spring Boot App with MySQL DB Git repo URL 
                   
 	1. URL : `https://github.com/IAmZero247/spring-boot-mysql-docker-compose.git`
 
-2.  docker-compose file
+2. ##### Docker-compose file
 
 ```
 	---

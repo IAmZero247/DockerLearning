@@ -69,7 +69,7 @@
 8. #### <ins>Run docker image with port mapping</ins>
 	`$ docker run -p 8080:8080 sb-app`
 	
-	`$ docker run -d -p 8080:8080 ashokit/sb-app `
+	`$ docker run -d -p 8080:8080 ruby4eyes/sb-app `
 
 	1.	Note: Enable 8080 port number in EC2 VM security group
 

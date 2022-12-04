@@ -47,8 +47,8 @@
 `$ docker volume inspect <vol-name>`
 
 #### <ins>Delete docker volume</ins>
-` docker volume rm <vol-name>`
+`$ docker volume rm <vol-name>`
 
 #### <ins>Delete all docker volumes</ins>
-`docker system prune --volumes`
+`$ docker system prune --volumes`
 	  

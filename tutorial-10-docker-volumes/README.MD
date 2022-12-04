@@ -51,4 +51,12 @@
 
 #### <ins>Delete all docker volumes</ins>
 `$ docker system prune --volumes`
+
+
+### <ins>Docker Volume - Anonymous Volumes</ins>
+	  
+### <ins>Docker Volume - Named Volumes</ins>
+
+### <ins>Docker Volume - BindMounts</ins>
+	  
 	  

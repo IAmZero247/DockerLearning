@@ -79,7 +79,7 @@ $ docker-compose down   --> this will remove volumes to
 
 ### Name of the file should be docker-compose.yml
 
-### Use case : Spring Boot with MySQL using Docker Compose
+### Use case : Spring Boot with MySQL using Docker Compose [Compose file use networks]
 
 1. ##### Spring Boot App with MySQL DB Git repo URL 
                   
@@ -169,7 +169,7 @@ $ docker-compose down   --> this will remove volumes to
 
 
 
-### Use case : Creating development environment using docker (MySQL + Wordpress)
+### Use case : Creating development environment using docker (MySQL + Wordpress) [Compose file use links]
 
 1.  Remove all the running container
 

@@ -79,6 +79,96 @@ $ docker-compose down   --> this will remove volumes to
 
 ### Name of the file should be docker-compose.yml
 
+### Use case : Spring Boot with MySQL using Docker Compose
+
+1. Spring Boot App with MySQL DB Git repo URL 
+                  
+	1. URL : `https://github.com/IAmZero247/spring-boot-mysql-docker-compose.git`
+
+2.  docker-compose file
+
+```
+	---
+	version: "3"
+	services:
+	  application:
+		image: ruby4eyes/spring-boot-mysql-app
+		networks:
+		  - springboot-mysqldb-net
+		ports:
+		  - "8080:8080"
+		depends_on:
+		  - mysqldb
+	  mysqldb:
+		image: mysql:5.7
+		networks:
+		  - springboot-mysqldb-net
+		environment:
+		  - MYSQL_ROOT_PASSWORD=root
+		  - MYSQL_DATABASE=sbms
+	networks:
+	  - springboot-mysqldb-net:
+	...	
+```	
+3. ##### Clone git repo url
+`$ git clone https://github.com/IAmZero247/spring-boot-mysql-docker-compose.git`
+
+4. ##### Get into project directory
+`$ cd spring-boot-mysql-docker-compose`
+
+5. ##### Build Maven Project
+`$ mvn clean package`
+
+6. ##### Create Docker Image  ( Image Name : spring-boot-mysql-app )
+```
+	$ docker build -t spring-boot-mysql-app .
+	
+	$ docker build -tag spring-boot-mysql-app ruby4eyes/spring-boot-mysql-app
+	
+	# docker push
+```	
+
+7. ##### Check docker image created or not
+`$ docker images`
+
+8. ##### Run containers using docker compose ( docker-compose.yml available )
+`$ docker-compose up -d`
+
+9. ##### Check containers which are created
+`$ docker-compose ps`
+
+10. ##### Check logs of application contianer
+`$ docker logs -f <container-name>`
+
+ 1. Note: Access the application in browser
+
+	URL : http://ec2-vm-public-ip:host-port/
+
+
+11. ##### Get into App container to check jar file 
+`$ docker exec -it <container-name> /bin/bash/`
+
+
+12. ##### Check DB tables by entering into container
+```
+	$ docker exec -it <db-container-name> /bin/bash
+
+	$ mysql -u root -p
+
+	$ show databases;
+
+	$ use <db-name>   (our db name is sbms)
+
+	$ show tables;
+
+	$ select * from table-name  (our table name is book)
+```
+
+
+
+
+
+
 ### Use case : Creating development environment using docker (MySQL + Wordpress)
 
 1.  Remove all the running container

@@ -1,4 +1,4 @@
-# Docker Tutorial 02
+# Docker Tutorial 06
 
 This tutorial we're going to look at building our own images from a Dockerfile
 

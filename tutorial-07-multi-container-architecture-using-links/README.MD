@@ -1,4 +1,4 @@
-# Docker Tutorial 04 - Multi Container Architecture Using Docker   
+# Docker Tutorial 07 - Multi Container Architecture Using Docker   
 
 1. link (adhoc way)
 2. docker-compose

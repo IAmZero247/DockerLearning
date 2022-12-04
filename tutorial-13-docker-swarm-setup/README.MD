@@ -72,7 +72,7 @@
 
 2. Formula : (n-1)/2
 
-	1. If we take 2 servers and one goes down  
+	1. If we take 2 servers and 1 goes down  
 
 			(2-1)/2 => 0.5 ( It can't become master )
 

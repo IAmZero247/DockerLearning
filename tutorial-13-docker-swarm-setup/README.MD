@@ -64,6 +64,8 @@
 
 4. #### Incase if we need more managers, We need to use join token for manager 
    `$ sudo docker swarm join-token manager`
+   
+5. #### Complete docker login   
 
 ## <ins>Q: what is docker swarm manager quarm?</ins>
 

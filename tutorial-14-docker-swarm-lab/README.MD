@@ -1,83 +1,101 @@
-# Docker Tutorial 10 - Docker Swarm  
+# Docker Tutorial 10 - Docker Swarm Lab
 
-1. <ins>Docker :</ins> It is a containerization platform. It is used to deploy the applications as containers.
+1. In Docker swarm we need to deploy our application as a service.
 
-2. <ins>Docker Swarm :<ins> It is an Orchestration Platform. It is used to manage docker containers.
+## <ins>Docker Swarm Service</ins>
 
-   1. Managing docker containers nothing but creating / updating / scale up / scale down / remove containers
+1. Service is collection of one or more containers of same image
 
-   2. In market we have docker swarm, kubernetes, open shfit as Orachestration platforms.
+2. There are 2 types of services in docker swarm
 
-
-3. Docker Swarm is used to setup Docker Cluster
-
-   1. Cluster means group of servers
-
-   2. Docker swarm is embedded in Docker engine ( No need to install Docker Swarm Seperatley )
-
-   3. We will setup Master(Manager) and Worker nodes using Docker Swarm cluster
-
-   4. Master(Manager) Node  will schedule the tasks (containers) and manage the nodes and node failures
-
-   5. Worker nodes will perform the action (containers will run here) based on master node instructions
+	1. Replica (default mode)
+	2. global
 
 
-## <ins>Swarm Features</ins>
-
-1. Cluster Management
-2. Decentralize design
-3. Declarative service model
-4. Scaling
-5. Multi Host Network
-6. Service Discovery
-7. Load Balancing
-8. Secure by default
-9. Rolling Updates
-
-
-## <ins>Docker Swarm Cluster Setup In Aws </ins>
-
-
-1. #### Create 3 EC2 instances (ubuntu) & install docker in all 3 instances using below 2 commands
-	```
-		$ curl -fsSL https://get.docker.com -o get-docker.sh
-		$ sudo sh get-docker.sh
-	```
-	1. Note: Enable 2377 port in security group for Swarm Cluster Communications
-    2. Note: SSH user is ubuntu
-    3. Now we can choose one as Manager node and other 2 as Worker nodes
+3. Syntax
+  ```
+  
+  $ sudo docker service create --name <serviceName> -p <hostPort>:<containerPort> <imageName>
+  
+  Ex :  $ sudo docker service create --name sb-app -p 8080:8080 ruby4eyes/sb-app
+  
+  ```
 
 
 
-2. #### Connect to Master Machine and execute below command [Initialize docker swarm cluster]
-
-   `$ sudo docker swarm init --advertise-addr <private-ip-of-master-node>`
-
-    1. Ex : $ sudo docker swarm init --advertise-addr 172.31.37.100
-
-3. #### Get Join token for worker from master  (this token is used by workers to join with master)
-   `$ sudo docker swarm join-token worker`
-
-   1. Note: Copy the token and execute in all worker nodes with sudo permission
-
-   2. Ex: sudo docker swarm join --token SWMTKN-1-4pkn4fiwm09haue0v633s6snitq693p1h7d1774c8y0hfl9yz9-8l7vptikm0x29shtkhn0ki8wz 172.31.37.100:2377
-
-4. #### Incase if we need more managers, We need to use join token for manager 
-   `$ sudo docker swarm join-token manager`
-
-## <ins>Q: what is docker swarm manager quarm?</ins>
-
-1. Ans) If we run only 2 masters then we can't get High Availability 
+4. By default 1 replica will be created
 
 
-2. Formula : (n-1)/2
+### <ins>Check the services created</ins>
+`$ docker service ls` 
 
-	1. If we take 2 servers and 1 goes down  
+### <ins>We can scale docker service</ins>
+```
+$ docker service scale <serviceName>=<no.of.replicas>
 
-			(2-1)/2 => 0.5 ( It can't become master )
+$ docker service scale sb-app=4 
+```
 
-			(3-1)/2 => 1 (it can be leader when the main leader is down)
+### <ins>Check the services created</ins>
+`$ docker service ls` 
 
-	2. Note: Always use odd number for Master machines
+```
+ID             NAME      MODE         REPLICAS   IMAGE                     PORTS
+dvlkuzr46h2p   sb-app    replicated   4/4        ruby4eyes/sb-app:latest   *:8080->8080/tcp
+```
+
+### <ins>Inspect docker service</ins>
+`$ sudo docker service inspect --pretty <service-name>`
+
+```
+ID:             dvlkuzr46h2p7sks517ubtymi
+Name:           sb-app
+Service Mode:   Replicated
+ Replicas:      4
+Placement:
+UpdateConfig:
+ Parallelism:   1
+ On failure:    pause
+ Monitoring Period: 5s
+ Max failure ratio: 0
+ Update order:      stop-first
+RollbackConfig:
+ Parallelism:   1
+ On failure:    pause
+ Monitoring Period: 5s
+ Max failure ratio: 0
+ Rollback order:    stop-first
+ContainerSpec:
+ Image:         ruby4eyes/sb-app:latest@sha256:5e3cd5ff6532936698e54f6adffbc55db5543c81badd1dd605beb0f81e82c5b3
+ Init:          false
+Resources:
+Endpoint Mode:  vip
+Ports:
+ PublishedPort = 8080
+  Protocol = tcp
+  TargetPort = 8080
+  PublishMode = ingress
+
+```
+
+### <ins>See service details</ins>
+`$ sudo docker service ps <service-name>`
+
+```
+$ sudo docker service ps sb-app
+
+ID             NAME       IMAGE                     NODE               DESIRED STATE   CURRENT STATE           ERROR     PORTS
+n3eg29r2goo6   sb-app.1   ruby4eyes/sb-app:latest   ip-172-31-88-166   Running         Running 5 minutes ago
+82ac9bsonzmj   sb-app.2   ruby4eyes/sb-app:latest   ip-172-31-80-236   Running         Running 3 minutes ago
+omb6oqkcdpy1   sb-app.3   ruby4eyes/sb-app:latest   ip-172-31-80-236   Running         Running 3 minutes ago
+levim5gpdvhn   sb-app.4   ruby4eyes/sb-app:latest   ip-172-31-90-61    Running         Running 3 minutes ago
+
+```
+
+### <ins>Remove one node from swarm cluster</ins>
+`$ sudo docker swarm leave`
+
+### <ins>Remove docker service</ins> 
+`$ sudo docker service rm <service-name>`
 
 

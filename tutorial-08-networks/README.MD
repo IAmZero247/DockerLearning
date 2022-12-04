@@ -9,9 +9,9 @@
 
 2. In Docker we will have below 3 default networks
 
-			1. none
-			2. host
-			3. bridge
+			1. None
+			2. Host
+			3. Bridge
 			
 3. In Docker we have below 5 network drivers
 

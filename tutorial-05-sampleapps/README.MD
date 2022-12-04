@@ -128,7 +128,7 @@
 
 
 12. URL To access The Application :  `http://ec2-vm-public-ip:host-port/maven-web-app`
-    1. Note: In the above url "java-maven-web-app" is called as context path (name of the war file will become context path)
+    1. Note: In the above url "maven-web-app" is called as context path (name of the war file will become context path)
 	
 
 ###  <ins>Dockerizing Python Flask App</ins>	

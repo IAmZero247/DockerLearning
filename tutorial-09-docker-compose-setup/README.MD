@@ -204,7 +204,7 @@ $ docker-compose down   --> this will remove volumes to
 			image: wordpress
 			ports:
 			  - 5050:80
-            		links:
+            	links:
 			  - mydb:mysql-wp-l1
       ---
 
